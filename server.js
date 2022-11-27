@@ -166,7 +166,7 @@ app.delete("/delete", (req, res) => {
       userModel.find({ email: email }).then((data) => {
         if (data[0].role == "admin") {
           courseModal.deleteOne({ _id: req.headers.course_id }).then((data) => {
-            res.send("course has been successfully deleted");
+            res.send("course has been successfully deleted").status(200);
           });
         } else {
           res.send("You can't delete the course");
