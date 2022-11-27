@@ -142,7 +142,7 @@ app.put("/update", (req, res) => {
                 { $set: { approved: true } }
               )
               .then((data) => {
-                res.status(200).send("updated sucessfully");
+                res.status(200).send("Approved sucessfully");
               });
           });
         } else {
